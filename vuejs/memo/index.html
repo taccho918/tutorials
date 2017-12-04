@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>memoapp</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/marked@0.3.6"></script>
+	<script src="https://unpkg.com/lodash@4.16.0"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="memo-app">
+    <div id="memo-form">
+      <textarea class="form-control" :value="input" @input="update"></textarea>
+      <div v-html="compiledMarkdown"></div>
+      <button type="button" class="btn btn-primary btn-block" id="btn-add">add</button>
+    </div>
+
+    <div id="memo-area">
+      aaa
+    </div>
+
+    <button type="button" class="btn btn-primary btn-block" id="btn-delete">delete</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
